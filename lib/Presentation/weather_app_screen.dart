@@ -28,6 +28,10 @@ class WeatherAppScreen extends StatelessWidget {
         return FutureBuilder<WeatherModel>(
         future: StoreObject.currentWeather(),
         builder: ((context, snapshot) {
+
+          if (snapshot.connectionState==ConnectionState.waiting)
+          return Center(child: CircularProgressIndicator());
+          
           if (snapshot.hasData) {
             final double temperatue = snapshot.data!.main!.temp! - 273.15;
 
@@ -161,7 +165,7 @@ class WeatherAppScreen extends StatelessWidget {
                                     color: Colors.white,
                                   ),
                                   Text(
-                                    "${snapshot.data!.main!.humidity.toString()}%",
+                                    "${snapshot.data!.main!.humidity.toString()}% humidity",
                                     style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w600,
