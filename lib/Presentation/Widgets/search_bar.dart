@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 import 'package:dio/dio.dart';
+import '../Controller/weather_store.dart';
 
-import '../Dio/dio_services.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final storeObject = context.read<DioServiceStore>();
+    final storeObject = context.read<WeatherStore>();
 
     return TextField(
       controller: storeObject.searchBar,

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import 'Dio/dio_services.dart';
+import 'Controller/weather_store.dart';
 import 'Model/model.dart';
 import 'Widgets/search_bar.dart';
 
@@ -13,7 +13,7 @@ class WeatherAppScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final StoreObject = context.read<DioServiceStore>();
+    final StoreObject = context.read<WeatherStore>();
 
     return Scaffold(
       backgroundColor: Colors.white,

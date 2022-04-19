@@ -5,16 +5,15 @@ import 'package:provider/provider.dart';
 import 'package:dio/dio.dart';
 import '../Model/model.dart';
 import 'package:mobx/mobx.dart';
-part 'dio_services.g.dart';
+part 'weather_store.g.dart';
 
 
-class DioServiceStore = DioService with _$DioServiceStore;
+class WeatherStore = WeatherState with _$WeatherStore;
 
-abstract class DioService with Store{
+abstract class WeatherState with Store{
 
   final TextEditingController searchBar = TextEditingController();
   static String _key = "152131c1dfc05a87f6f7e463a135a149"; 
-  // String nameCity = "Islamabad";
 
     Future<WeatherModel> currentWeather() async {
     Response response;

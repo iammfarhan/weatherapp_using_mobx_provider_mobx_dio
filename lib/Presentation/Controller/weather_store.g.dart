@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'dio_services.dart';
+part of 'weather_store.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,8 +8,8 @@ part of 'dio_services.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$DioServiceStore on DioService, Store {
-  final _$nameCityAtom = Atom(name: 'DioService.nameCity');
+mixin _$WeatherStore on WeatherState, Store {
+  final _$nameCityAtom = Atom(name: 'WeatherState.nameCity');
 
   @override
   String get nameCity {
@@ -24,16 +24,16 @@ mixin _$DioServiceStore on DioService, Store {
     });
   }
 
-  final _$DioServiceActionController = ActionController(name: 'DioService');
+  final _$WeatherStateActionController = ActionController(name: 'WeatherState');
 
   @override
   dynamic searchCityName(String name) {
-    final _$actionInfo = _$DioServiceActionController.startAction(
-        name: 'DioService.searchCityName');
+    final _$actionInfo = _$WeatherStateActionController.startAction(
+        name: 'WeatherState.searchCityName');
     try {
       return super.searchCityName(name);
     } finally {
-      _$DioServiceActionController.endAction(_$actionInfo);
+      _$WeatherStateActionController.endAction(_$actionInfo);
     }
   }
 
